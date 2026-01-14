@@ -1,0 +1,6 @@
+@Tp1_API_Simple_HostAddress = http://localhost:5053
+
+GET {{Tp1_API_Simple_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
