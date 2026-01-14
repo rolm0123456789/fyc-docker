@@ -1,0 +1,16 @@
+:host { font-family: sans-serif; display: block; padding: 20px; background: #f0f2f5; min-height: 100vh; }
+.container { max-width: 800px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+h1 { text-align: center; color: #2c3e50; }
+.loading, .error { text-align: center; padding: 20px; font-size: 1.2rem; }
+.error { color: #e74c3c; background: #fadbd8; border-radius: 8px; }
+.summary { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #eee; }
+.status-badge { font-size: 1.5rem; font-weight: bold; padding: 10px 20px; border-radius: 8px; background: #e74c3c; color: white; }
+.dashboard.passed .status-badge { background: #27ae60; }
+.info p { margin: 5px 0; color: #7f8c8d; }
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.card { display: flex; align-items: center; padding: 15px; background: #fff; border: 2px solid #ecf0f1; border-radius: 10px; transition: all 0.3s ease; }
+.card.success { border-color: #27ae60; background: #eafaf1; }
+.icon { font-size: 2rem; margin-right: 15px; }
+.name { flex-grow: 1; font-weight: 600; color: #34495e; }
+.indicator { font-weight: bold; color: #e74c3c; }
+.card.success .indicator { color: #27ae60; }
