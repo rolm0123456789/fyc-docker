@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>🚀 Dashboard de Conformité Docker</h1>
+
+  <div *ngIf="isLoading()" class="loading">Chargement du diagnostic (Signals)...</div>
+  <div *ngIf="errorMsg()" class="error">{{ errorMsg() }}</div>
+
+  <div *ngIf="statusData()" class="dashboard" [class.passed]="statusData().globalStatus === 'PASSED'">
+
+    <header class="summary">
+      <div class="status-badge">{{ statusData().globalStatus }}</div>
+      <div class="info">
+        <p> Heure système : {{ statusData().systemTime | date:'medium' }}</p>
+        <p> Fuseau horaire : {{ statusData().timezone }}</p>
+      </div>
+    </header>
+
+    <div class="cards-grid">
+      <div class="card" *ngFor="let check of statusData().checks" [class.success]="check.status">
+        <span class="icon">{{ check.icon }}</span>
+        <span class="name">{{ check.name }}</span>
+        <span class="indicator">
+          {{ check.status ? ' OK' : ' ERREUR' }}
+        </span>
+      </div>
+    </div>
+
+  </div>
+</div>
